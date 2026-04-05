@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "projects": {
+    "anymodel-umb": {
+      "id": "anymodel-umb",
+      "name": "anymodel-umb",
+      "techStack": [],
+      "keywords": [],
+      "created": "2026-04-02T06:02:32.993Z"
+    }
+  },
+  "defaultProject": "anymodel-umb",
+  "metadata": {
+    "created": "2026-04-02T06:02:32.993Z",
+    "lastModified": "2026-04-02T06:02:32.993Z"
+  }
+}

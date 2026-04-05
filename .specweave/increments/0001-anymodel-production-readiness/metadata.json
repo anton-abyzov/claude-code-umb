@@ -1,0 +1,15 @@
+{
+  "id": "0001-anymodel-production-readiness",
+  "status": "completed",
+  "type": "feature",
+  "priority": "P1",
+  "created": "2026-04-02T06:01:08.569Z",
+  "lastActivity": "2026-04-02T06:22:37.919Z",
+  "testMode": "TDD",
+  "coverageTarget": 75,
+  "feature_id": null,
+  "epic_id": null,
+  "externalLinks": {},
+  "readyForReviewAt": "2026-04-02T06:21:42.370Z",
+  "approvedAt": "2026-04-02T06:22:37.919Z"
+}

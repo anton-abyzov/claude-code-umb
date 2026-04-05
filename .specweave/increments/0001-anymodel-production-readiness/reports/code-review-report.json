@@ -1,0 +1,75 @@
+{
+  "version": "1.1",
+  "scope": "increment 0001-anymodel-production-readiness",
+  "date": "2026-04-02",
+  "reviewers": ["logic", "security", "spec-compliance"],
+  "gateCheck": { "passed": true, "reason": null },
+  "summary": {
+    "total": 5,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 3,
+    "info": 2
+  },
+  "validation": {
+    "performed": true,
+    "preValidation": { "critical": 0, "high": 0, "medium": 1 },
+    "postValidation": { "critical": 0, "high": 0, "medium": 0 },
+    "fixedInIteration": 1,
+    "fixes": ["MEDIUM: health endpoint URL matching — fixed to handle query strings and trailing slashes", "LOW: publish.yml permissions block added", "LOW: test coverage for model=null path added"]
+  },
+  "specCompliance": {
+    "acsTotal": 10,
+    "acsPassed": 10,
+    "scopeCreep": 0,
+    "misinterpretations": 0
+  },
+  "findings": [
+    {
+      "severity": "LOW",
+      "title": "Health endpoint information disclosure",
+      "file": "proxy.mjs:219-229",
+      "category": "A01:2021 Sensitive Data Exposure",
+      "description": "Health endpoint exposes provider, model, version, uptime. Acceptable for localhost CLI proxy but worth noting.",
+      "validated": true,
+      "status": "acknowledged"
+    },
+    {
+      "severity": "LOW",
+      "title": "GitHub Actions pinned to mutable version tags",
+      "file": ".github/workflows/ci.yml:16-18",
+      "category": "Supply Chain Security",
+      "description": "actions/checkout@v4 and actions/setup-node@v4 use mutable tags. Consider pinning to SHAs.",
+      "validated": true,
+      "status": "acknowledged"
+    },
+    {
+      "severity": "LOW",
+      "title": "CI workflow fragility if dependencies added",
+      "file": ".github/workflows/ci.yml:20",
+      "category": "CI best practice",
+      "description": "npm install skipped because zero dependencies. Future contributors adding deps may be confused.",
+      "validated": true,
+      "status": "acknowledged"
+    },
+    {
+      "severity": "INFO",
+      "title": "No npm publish provenance",
+      "file": ".github/workflows/publish.yml:18",
+      "category": "Supply Chain Integrity",
+      "description": "npm publish without --provenance flag. Consumers cannot verify package origin.",
+      "validated": true,
+      "status": "noted"
+    },
+    {
+      "severity": "INFO",
+      "title": "Health endpoint exposes package version",
+      "file": "proxy.mjs:222",
+      "category": "Information Disclosure",
+      "description": "Standard for open-source CLI tools. Version already public on npm/GitHub.",
+      "validated": true,
+      "status": "noted"
+    }
+  ]
+}
