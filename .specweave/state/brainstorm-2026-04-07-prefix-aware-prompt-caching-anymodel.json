@@ -1,0 +1,11 @@
+{
+  "topic": "Prefix-aware prompt caching for AnyModel proxy - Ollama local model optimization",
+  "depth": "deep",
+  "lenses": [],
+  "startedAt": "2026-04-07T12:00:00Z",
+  "phase": "complete",
+  "completedAt": "2026-04-07T13:00:00Z",
+  "approaches": ["A:DeterministicStabilization", "B:LlamaCppBypass", "C:PrefixSerializationCache", "D:ProviderAgnosticStrategy", "E:PreparedStatements", "F:HybridPrefixMetrics"],
+  "selectedApproach": "F:HybridPrefixMetrics",
+  "handedOffTo": null
+}

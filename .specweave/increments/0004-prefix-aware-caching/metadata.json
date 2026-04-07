@@ -1,0 +1,15 @@
+{
+  "id": "0004",
+  "name": "prefix-aware-caching",
+  "title": "Prefix-Aware Prompt Caching for Ollama",
+  "description": "Deterministic prefix serialization + synthetic cache metrics to maximize Ollama KV cache reuse (17.7x speedup)",
+  "type": "feature",
+  "status": "active",
+  "lastActivity": "2026-04-07T14:30:00Z",
+  "priority": "P1",
+  "createdAt": "2026-04-07T14:00:00Z",
+  "testing": {
+    "defaultTestMode": "TDD",
+    "coverageTarget": 80
+  }
+}
